@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { pick, omit } = require("lodash")
-const colors = require("tailwindcss/colors")
-const defaultTheme = require("tailwindcss/defaultTheme")
+const { pick, omit } = require("lodash");
+const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -32,7 +32,7 @@ module.exports = {
       },
       fontFamily: {
         body: [
-          "Inter",
+          "Poppins",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
@@ -49,7 +49,7 @@ module.exports = {
           "Noto Color Emoji",
         ],
         sans: [
-          "Inter",
+          "Poppins",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
@@ -87,4 +87,4 @@ module.exports = {
   future: {
     hoverOnlyWhenSupported: true,
   },
-}
+};
