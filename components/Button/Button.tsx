@@ -1,6 +1,6 @@
-import { cva, type VariantProps } from "class-variance-authority";
+import { cva, type VariantProps } from 'class-variance-authority';
 
-import { twMerge } from "tailwind-merge";
+import { twMerge } from 'tailwind-merge';
 
 const button = cva(
   [
@@ -21,7 +21,7 @@ const button = cva(
     variants: {
       intent: {
         primary: [
-          'bg-amber-300', 'text-zinc-900', 'hover:enabled:bg-amber-400',
+          'bg-amber-300', 'text-zinc-900', 'hover:enabled:bg-amber-400 hover:enabled:border-amber-400',
           'disabled:text-gray-500', 'disabled:bg-zinc-800', 'disabled:border-zinc-800',
         ],
         secondary: [
@@ -46,7 +46,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   underline?: boolean;
 }
 
-export function Button({ className, intent, size, underline, ...props }: ButtonProps) {
+export function Button({ intent, size, underline, className, ...props }: ButtonProps) {
   return (
     <button className={twMerge(button({ intent, size, className, underline }))} {...props}>
       {props.children}
