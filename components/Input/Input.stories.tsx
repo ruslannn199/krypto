@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Input } from './Input';
 import { ConfigProvider } from 'antd';
 import mainTheme from 'theme/main';
+import StyledComponentsRegistry from 'lib/AntdRegistry';
 
 const meta: Meta<typeof Input> = {
   title: 'Input',
@@ -26,9 +27,11 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   render: (args) => (
-    <ConfigProvider theme={mainTheme}>
-      <Input {...args} />
-    </ConfigProvider>
+    <StyledComponentsRegistry>
+      <ConfigProvider theme={mainTheme}>
+        <Input {...args} />
+      </ConfigProvider>
+    </StyledComponentsRegistry>
   ),
 }
 
