@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Ca Krypto',
 }
 
-const poppins = Poppins({
+export const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
   weight: ['400', '500', '700'],

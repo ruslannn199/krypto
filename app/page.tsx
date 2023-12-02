@@ -11,7 +11,8 @@ export default function Web() {
   return (
     <Form>
       <Input placeholder="Text" type="email" required />
-      <Button type="submit">Submit</Button>
+      <Button type="primary">Submit</Button>
+      <Button type="default">Difference</Button>
     </Form>
   )
 }
