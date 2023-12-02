@@ -1,17 +1,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  * {
-    @apply box-border;
-  }
-
-  a {
-    @apply text-blue-600 decoration-0 hover:decoration-auto;
-  }
-
-  img {
-    @apply max-w-full block;
-  }
-}
+@import 'normalize.css';
