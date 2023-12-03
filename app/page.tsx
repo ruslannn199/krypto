@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
-import { Form } from 'antd';
-import { Input } from 'components/Input/Input';
-import { Button } from 'components/Button/Button';
+import SettingsIcon from '@p/svg/settings.svg';
+import { FloatButton } from '@/components/FloatButton';
 
 export const metadata: Metadata = {
   title: 'Krypto App',
@@ -9,10 +8,6 @@ export const metadata: Metadata = {
 
 export default function Web() {
   return (
-    <Form>
-      <Input placeholder="Text" type="email" required />
-      <Button type="primary">Submit</Button>
-      <Button type="default">Difference</Button>
-    </Form>
-  )
+    <FloatButton customIcon={<SettingsIcon />} />
+  );
 }

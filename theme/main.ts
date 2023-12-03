@@ -33,6 +33,11 @@ const mainTheme: ThemeConfig = {
       primaryShadow: colors.amber[300],
       
     },
+    FloatButton: {
+      colorBgElevated: colors.zinc[900],
+      colorFillContent: colors.zinc[800],
+      colorTextLightSolid: colors.amber[300],
+    },
     Input: {
       activeBg: colors.transparent,
       colorBgContainer: colors.zinc[800],
