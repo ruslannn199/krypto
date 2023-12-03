@@ -1,21 +1,14 @@
 import 'styles/global.css';
-import { Poppins } from 'next/font/google';
-import StyledComponentsRegistry from 'lib/AntdRegistry';
+import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import type { Metadata } from 'next';
 import { ConfigProvider } from 'antd';
-import mainTheme from 'theme/main';
+import mainTheme from '@/theme/main';
 import { cva } from 'class-variance-authority';
+import { poppins } from '@/styles/fonts';
 
 export const metadata: Metadata = {
   title: 'Ca Krypto',
 }
-
-export const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '700'],
-  variable: '--font-poppins',
-});
 
 const html = cva([
   poppins.variable,

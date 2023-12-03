@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
-import { ConfigProvider } from 'antd';
-import mainTheme from 'theme/main';
+import { Button } from '.';
 
 const meta: Meta<typeof Button> = {
   title: 'Button',
@@ -28,10 +26,8 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   render: (args) => (
-    <ConfigProvider theme={mainTheme}>
-      <Button {...args} />
-      <Button {...args} type="default" />
-    </ConfigProvider>),
+    <Button {...args} />
+  ),
 }
 
 export default meta;

@@ -3,7 +3,7 @@ import type { Preview } from '@storybook/react';
 import StyledComponentsRegistry from '../lib/AntdRegistry';
 import mainTheme from '../theme/main';
 import { ConfigProvider } from 'antd';
-import { poppins } from '../app/layout';
+import { poppins } from '../styles/fonts';
 
 import '../styles/global.css';
 

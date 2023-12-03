@@ -16,5 +16,5 @@ export function Input({ className, ...props}: InputProps) {
         />
       </StyleProvider>
     </Form.Item>
-  )
+  );
 }
