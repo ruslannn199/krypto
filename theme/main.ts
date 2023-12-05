@@ -1,5 +1,8 @@
+import { selectTheme } from '@/components/Select';
 import type { ThemeConfig } from 'antd';
 import colors from 'tailwindcss/colors';
+
+export type componentsThemesMap = NonNullable<ThemeConfig['components']>;
 
 const mainTheme: ThemeConfig = {
   token: {
@@ -49,7 +52,8 @@ const mainTheme: ThemeConfig = {
       paddingInline: 16,
       borderRadius: 12,
       lineWidth: 2,
-    }
+    },
+    Select: selectTheme,
   }
 }
 

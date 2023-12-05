@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Search } from '@/components/Search';
+import { Select } from '@/components/Select';
 
 export const metadata: Metadata = {
   title: 'Krypto App',
@@ -7,6 +7,6 @@ export const metadata: Metadata = {
 
 export default function Web() {
   return (
-    <Search />
+    <Select />
   );
 }

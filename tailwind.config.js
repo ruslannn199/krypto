@@ -2,6 +2,19 @@
 const { pick, omit } = require('lodash');
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
+
+// Rotate X utilities
+const rotateX = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.rotate-x-90': {
+      transform: 'rotateX(90deg)',
+    },
+    '.rotate-x-180': {
+      transform: 'rotateX(180deg)',
+    }
+  })
+})
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -87,7 +100,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss-animate'),
+    require('tailwindcss-animate'), rotateX,
   ],
   future: {
     hoverOnlyWhenSupported: true,
