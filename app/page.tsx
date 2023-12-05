@@ -1,14 +1,12 @@
-import { Metadata } from "next";
-import { Button } from "components/Button/Button";
+import { Metadata } from 'next';
+import { Password } from '@/components/Password';
 
 export const metadata: Metadata = {
-  title: "Krypto App",
+  title: 'Krypto App',
 }
 
 export default function Web() {
   return (
-    <>
-      <Button disabled>some text</Button>
-    </>
-  )
+    <Password />
+  );
 }

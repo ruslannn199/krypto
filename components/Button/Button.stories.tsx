@@ -1,32 +1,33 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
+import { Button } from '.';
 
 const meta: Meta<typeof Button> = {
   title: 'Button',
   component: Button,
   args: {
-    intent: 'primary',
-    underline: false,
+    type: 'primary',
     children: 'Button',
-    size: 'lg',
     disabled: false,
+    size: 'middle',
   },
   argTypes: {
-    intent: {
-      options: ['primary', 'secondary'],
-      control: { type: 'select' },
-    },
     size: {
-      options: ['md', 'lg'],
+      options: ['middle', 'large', 'small'],
       control: { type: 'select' },
     },
+    type: {
+      options: ['primary', 'default', 'link', 'text'],
+      control: { type: 'select' },
+    }
   },
 }
 
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  render: (args) => <Button {...args} />,
+  render: (args) => (
+    <Button {...args} />
+  ),
 }
 
 export default meta;

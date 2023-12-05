@@ -34,3 +34,4 @@ yarn-error.log*
 
 /.npm-only-allow
 build-storybook.log
+analyze
